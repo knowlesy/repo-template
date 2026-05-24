@@ -18,7 +18,7 @@ This boilerplate eliminates configuration drift by including pre-aligned environ
 *   **`.gitattributes`** – Automated safety net to enforce clean Unix-style (`LF`) line endings for Python/YAML and native Windows (`CRLF`) line endings for PowerShell scripts.
 
 ### 🤖 Automation & Scaffolding
-*   **Folder Structure** – Placeholder folders equipped with `.gitkeep` directories ready for immediate codebase structuring (`/src`, `/charts`, `/scripts`).
+*   **Folder Structure** – Placeholder folders equipped with `.gitkeep` directories ready for immediate codebase structuring (`/logs`, `/github`, `/scripts`).
 
 ---
 
