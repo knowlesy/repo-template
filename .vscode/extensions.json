@@ -1,0 +1,47 @@
+{
+  // VS Code will prompt "Do you want to install the recommended extensions?" when
+  // this repo is opened. All extensions listed here are optional but strongly
+  // recommended for the platform engineering stack this template targets.
+  "recommendations": [
+    // ── Editor standards ────────────────────────────────────────────────────
+    // Required for .editorconfig to apply automatically — install this first
+    "EditorConfig.EditorConfig",
+
+    // ── Source control ───────────────────────────────────────────────────────
+    "eamodio.gitlens",
+
+    // ── AI coding assistants (use whichever your team has licensed) ──────────
+    "GitHub.copilot",
+    "GitHub.copilot-chat",
+    "google.geminicodeassist",
+
+    // ── Terraform / HCL ─────────────────────────────────────────────────────
+    "hashicorp.terraform",
+
+    // ── Ansible ──────────────────────────────────────────────────────────────
+    "redhat.ansible",
+
+    // ── Puppet ───────────────────────────────────────────────────────────────
+    "puppet.puppet-vscode",
+
+    // ── Python ───────────────────────────────────────────────────────────────
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "ms-python.black-formatter",
+
+    // ── PowerShell ───────────────────────────────────────────────────────────
+    "ms-vscode.powershell",
+
+    // ── YAML / Kubernetes / Helm ─────────────────────────────────────────────
+    "redhat.vscode-yaml",
+    "ms-kubernetes-tools.vscode-kubernetes-tools",
+
+    // ── Shell scripts ────────────────────────────────────────────────────────
+    "timonwong.shellcheck",
+    "foxundermoon.shell-format",
+
+    // ── General quality-of-life ──────────────────────────────────────────────
+    "streetsidesoftware.code-spell-checker",
+    "usernamehw.errorlens"
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  // Workspace settings — mirrors .editorconfig so formatting works even before
+  // the EditorConfig extension is installed. Once the extension is active it
+  // takes precedence, but these values act as a safe fallback.
+
+  // ── Editor defaults ──────────────────────────────────────────────────────
+  "editor.insertSpaces": true,
+  "editor.tabSize": 4,
+  "editor.detectIndentation": false,
+  "files.eol": "\n",
+  "files.encoding": "utf8",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+
+  // ── Language-specific overrides (mirrors .editorconfig) ──────────────────
+  "[terraform]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "hashicorp.terraform"
+  },
+  "[terraform-vars]": {
+    "editor.tabSize": 2
+  },
+  "[puppet]": {
+    "editor.tabSize": 2
+  },
+  "[yaml]": {
+    "editor.tabSize": 2
+  },
+  "[json]": {
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jsonc]": {
+    "editor.tabSize": 2
+  },
+  "[ruby]": {
+    "editor.tabSize": 2
+  },
+  "[shellscript]": {
+    "editor.tabSize": 2
+  },
+  "[powershell]": {
+    "editor.tabSize": 4,
+    "files.eol": "\r\n"
+  },
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false
+  },
+
+  // ── File associations for platform engineering types ──────────────────────
+  "files.associations": {
+    "*.tf": "terraform",
+    "*.tfvars": "terraform-vars",
+    "*.hcl": "hcl",
+    "*.pp": "puppet",
+    "Puppetfile": "ruby",
+    "Gemfile": "ruby",
+    "Rakefile": "ruby",
+    "*.j2": "jinja",
+    "*.tpl": "helm"
+  },
+
+  // ── YAML schema associations ──────────────────────────────────────────────
+  "yaml.schemas": {
+    "https://json.schemastore.org/github-workflow.json": ".github/workflows/*.yml",
+    "https://json.schemastore.org/github-action.json": ".github/actions/**/action.yml"
+  },
+
+  // ── Exclude generated/vendor dirs from search ────────────────────────────
+  "search.exclude": {
+    "**/.terraform": true,
+    "**/vendor/bundle": true,
+    "**/.bundle": true,
+    "**/spec/fixtures": true,
+    "**/__pycache__": true,
+    "**/venv": true,
+    "**/.venv": true,
+    "**/node_modules": true
+  },
+  "files.watcherExclude": {
+    "**/.terraform/**": true,
+    "**/vendor/bundle/**": true,
+    "**/__pycache__/**": true,
+    "**/venv/**": true
+  }
+}

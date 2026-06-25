@@ -1,0 +1,38 @@
+# CODEOWNERS
+# Defines who is automatically requested to review pull requests.
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+#
+# Syntax: <pattern>  @<owner> [additional owners...]
+# Owners can be GitHub usernames (@user) or teams (@org/team).
+# The last matching rule wins.
+#
+# Update this file before your first merge. Replace placeholders with
+# real GitHub usernames or team slugs from your organisation.
+
+# ── Default owner (catches everything not matched below) ─────────────────────
+*                              @knowlesy
+
+# ── Terraform ────────────────────────────────────────────────────────────────
+/terraform/                    @knowlesy
+*.tf                           @knowlesy
+*.tfvars.example               @knowlesy
+
+# ── Ansible ──────────────────────────────────────────────────────────────────
+/ansible/                      @knowlesy
+
+# ── Puppet ───────────────────────────────────────────────────────────────────
+/puppet/                       @knowlesy
+
+# ── Helm ─────────────────────────────────────────────────────────────────────
+/helm/                         @knowlesy
+/charts/                       @knowlesy
+
+# ── Python ───────────────────────────────────────────────────────────────────
+*.py                           @knowlesy
+
+# ── PowerShell ───────────────────────────────────────────────────────────────
+*.ps1                          @knowlesy
+*.psm1                         @knowlesy
+
+# ── CI/CD & repo config (require extra scrutiny) ─────────────────────────────
+/.github/                      @knowlesy

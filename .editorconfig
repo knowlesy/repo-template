@@ -1,6 +1,9 @@
-# EditorConfig helps developers define and maintain consistent
-# coding styles between different editors and IDEs.
+# EditorConfig helps developers define and maintain consistent coding styles
+# between different editors and IDEs.
 # https://editorconfig.org
+#
+# VS Code: install the "EditorConfig for VS Code" extension (EditorConfig.EditorConfig)
+# — it is listed in .vscode/extensions.json and VS Code will prompt you to install it.
 
 root = true
 
@@ -8,47 +11,79 @@ root = true
 # Global Defaults
 # ==========================================
 [*]
-# Use spaces instead of physical tabs
 indent_style = space
-# Default to standard 4-space indentation
 indent_size = 4
-# Enforce UTF-8 character encoding
 charset = utf-8
-# Enforce Unix-style line endings (\n) as the default global standard
 end_of_line = lf
-# Automatically insert a blank line at the end of every file upon saving
 insert_final_newline = true
-# Strip any accidental trailing whitespace on save
 trim_trailing_whitespace = true
 
 # ==========================================
-# Python Overrides
+# Python — PEP 8
 # ==========================================
 [*.py]
-# Enforce strict PEP 8 line spacing rules
 indent_size = 4
 end_of_line = lf
 
 # ==========================================
-# YAML, Helm, and ArgoCD Overrides
+# YAML, Helm, and ArgoCD
 # ==========================================
 [*.{yaml,yml}]
-# Kubernetes and Helm will crash if you use 4 spaces; must be strictly 2 spaces
+# Kubernetes and Helm require strictly 2-space indentation
 indent_size = 2
 
 # ==========================================
-# PowerShell Overrides
+# Terraform / HCL — HashiCorp standard
+# ==========================================
+[*.{tf,tfvars,hcl}]
+indent_size = 2
+end_of_line = lf
+
+# ==========================================
+# Puppet — Puppet style guide
+# ==========================================
+[*.pp]
+indent_size = 2
+end_of_line = lf
+
+# ==========================================
+# Ruby (used by Puppet: Gemfile, Rakefile)
+# ==========================================
+[*.{rb,Gemfile,Rakefile,Puppetfile}]
+indent_size = 2
+end_of_line = lf
+
+# ==========================================
+# Shell scripts
+# ==========================================
+[*.{sh,bash}]
+indent_size = 2
+end_of_line = lf
+
+# ==========================================
+# PowerShell — Windows native CRLF
 # ==========================================
 [*.{ps1,psm1,psd1}]
-# PowerShell scripts run natively on Windows expect CRLF (\r\n) line endings
+# PowerShell scripts run natively on Windows and expect CRLF line endings
 end_of_line = crlf
 indent_size = 4
 
 # ==========================================
-# Documentation Overrides
+# JSON
+# ==========================================
+[*.json]
+indent_size = 2
+
+# ==========================================
+# Markdown
 # ==========================================
 [*.md]
-# Markdown files use two trailing spaces to explicitly indicate a line break,
-# so we disable the automatic whitespace trimming feature here.
+# Markdown uses two trailing spaces for line breaks — do not trim them
 trim_trailing_whitespace = false
-indent_size = 4
+indent_size = 2
+
+# ==========================================
+# Makefile — tabs required
+# ==========================================
+[Makefile]
+indent_style = tab

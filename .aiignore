@@ -1,12 +1,48 @@
-# === SECRETS & CERTS (Keep out of source control) ===
+# AI context guardrails — applies to Claude, ChatGPT, Gemini Code Assist, and
+# any AI tool that respects a generic .aiignore file.
+#
+# GitHub Copilot uses .copilotignore instead — keep that file in sync with this one.
+# These two files are intentionally kept identical; update both together.
+#
+# Goal: keep secrets out of AI context windows and avoid wasting tokens on
+# generated artefacts that don't represent source-of-truth code.
+
+# === SECRETS & CREDENTIALS ===
 *.pem
 *.key
 *.crt
 *.cert
 *.pfx
+*.p12
+*.csr
 .env*
 secrets/
 certs/
+
+# === TERRAFORM ===
+# State files contain sensitive infrastructure data (IPs, passwords, etc.)
+*.tfstate
+*.tfstate.backup
+*.tfstate.d/
+# Provider plugins — large binaries, not source code
+.terraform/
+# Sensitive variable files
+*.tfvars
+!*.tfvars.example
+
+# === ANSIBLE ===
+# Vault password files
+vault_pass*
+.vault_pass
+*.vault_password
+# Retry files
+*.retry
+
+# === PUPPET ===
+# Vendor/bundle — large fetched dependencies
+vendor/bundle
+.bundle/
+spec/fixtures/
 
 # === PYTHON ===
 __pycache__/
@@ -25,9 +61,7 @@ pip-delete-this-directory.txt
 *.clixml
 
 # === HELM & ARGO ===
-# Ignore fetched dependencies (let helm dependency update fetch them)
 charts/
 *.tgz
-# Local user values files you don't want in git
 my-values.yaml
 .argocd-source-*.yaml
